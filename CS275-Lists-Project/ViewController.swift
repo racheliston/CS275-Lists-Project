@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  CS275-Lists-Project
 //
-//  Created by Rachel Liston on 10/14/21.
+//  Created by Rachel Liston and Sam Pitonyak on 10/14/21.
 //
 
 import UIKit
