@@ -9,8 +9,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet var recordLabel: UILabel!
-    @IBOutlet var foundedLabel: UILabel!
+
+    @IBOutlet var recordLabel: UITextField!
+    @IBOutlet var foundedLabel: UITextField!
     @IBOutlet var scheduleField: UITextView!
     
     

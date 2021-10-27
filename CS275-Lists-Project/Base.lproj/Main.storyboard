@@ -124,12 +124,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mY5-ch-hvJ">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Bt-TG-rhM">
                                                 <rect key="frame" x="75.5" y="0.0" width="322.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YdK-7s-7J4">
@@ -141,12 +140,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kc-S8-Xiu">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XA5-1s-1k7">
                                                 <rect key="frame" x="75.5" y="0.0" width="322.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RkS-bq-DR6">
@@ -169,7 +167,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="mY5-ch-hvJ" firstAttribute="leading" secondItem="5kc-S8-Xiu" secondAttribute="leading" id="x2m-HI-23k"/>
+                                    <constraint firstItem="2Bt-TG-rhM" firstAttribute="leading" secondItem="XA5-1s-1k7" secondAttribute="leading" id="Ica-4N-WjT"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -184,14 +182,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="Cbi-fh-ibg"/>
                     <connections>
-                        <outlet property="foundedLabel" destination="5kc-S8-Xiu" id="V9A-n9-GDn"/>
-                        <outlet property="recordLabel" destination="mY5-ch-hvJ" id="IQO-ya-Q4c"/>
+                        <outlet property="foundedLabel" destination="XA5-1s-1k7" id="ZbI-jG-WuG"/>
+                        <outlet property="recordLabel" destination="2Bt-TG-rhM" id="Qrr-pf-zoH"/>
                         <outlet property="scheduleField" destination="LAK-w9-kVZ" id="qyF-M3-Dye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmI-5R-xbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="-24"/>
+            <point key="canvasLocation" x="1015.9420289855074" y="-24.107142857142858"/>
         </scene>
     </scenes>
     <resources>
