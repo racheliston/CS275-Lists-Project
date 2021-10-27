@@ -54,21 +54,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsr-Tz-Chs">
-                                            <rect key="frame" x="20" y="0.0" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsr-Tz-Chs">
+                                            <rect key="frame" x="20" y="11" width="35.5" height="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5a3-ZH-KcU">
-                                            <rect key="frame" x="352" y="22" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5a3-ZH-KcU">
+                                            <rect key="frame" x="358.5" y="24" width="35.5" height="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EP-08-6XI">
-                                            <rect key="frame" x="20" y="45" width="31" height="15"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EP-08-6XI">
+                                            <rect key="frame" x="20" y="40" width="28.5" height="13.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -76,11 +76,12 @@
                                     <constraints>
                                         <constraint firstItem="9EP-08-6XI" firstAttribute="leading" secondItem="Hsr-Tz-Chs" secondAttribute="leading" id="0ia-io-LuV"/>
                                         <constraint firstItem="5a3-ZH-KcU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9EP-08-6XI" secondAttribute="trailing" constant="8" symbolic="YES" id="B0i-8E-Gkx"/>
-                                        <constraint firstItem="Hsr-Tz-Chs" firstAttribute="top" secondItem="bgt-c0-0cs" secondAttribute="topMargin" constant="-11" id="CAI-tg-bb2"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="9EP-08-6XI" secondAttribute="bottom" constant="-6" id="DpG-1R-kQ5"/>
+                                        <constraint firstItem="Hsr-Tz-Chs" firstAttribute="top" secondItem="bgt-c0-0cs" secondAttribute="topMargin" id="CAI-tg-bb2"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="9EP-08-6XI" secondAttribute="bottom" constant="0.5" id="DpG-1R-kQ5"/>
                                         <constraint firstItem="5a3-ZH-KcU" firstAttribute="centerY" secondItem="bgt-c0-0cs" secondAttribute="centerY" id="Fdb-8P-9eb"/>
                                         <constraint firstItem="Hsr-Tz-Chs" firstAttribute="leading" secondItem="bgt-c0-0cs" secondAttribute="leadingMargin" id="JrH-2h-aYo"/>
                                         <constraint firstItem="5a3-ZH-KcU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hsr-Tz-Chs" secondAttribute="trailing" constant="8" symbolic="YES" id="Pts-2f-7il"/>
+                                        <constraint firstItem="9EP-08-6XI" firstAttribute="top" secondItem="Hsr-Tz-Chs" secondAttribute="bottom" constant="12" id="Sfj-e0-25s"/>
                                         <constraint firstAttribute="trailing" secondItem="5a3-ZH-KcU" secondAttribute="trailing" constant="20" symbolic="YES" id="kzf-qw-VG6"/>
                                     </constraints>
                                 </tableViewCellContentView>
