@@ -96,6 +96,9 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNs-iX-Tyh">
                                                 <rect key="frame" x="0.0" y="0.0" width="67.5" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67.5" id="FnS-db-dJk"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -149,7 +152,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="2Bt-TG-rhM" firstAttribute="leading" secondItem="XA5-1s-1k7" secondAttribute="leading" id="Ica-4N-WjT"/>
+                                    <constraint firstItem="YdK-7s-7J4" firstAttribute="top" secondItem="ASc-Pr-ZT6" secondAttribute="top" constant="37" id="D3g-ot-bKg"/>
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydb-b6-qe7">
@@ -160,6 +163,8 @@
                                             <action selector="choosePhotoSource:" destination="e1T-LQ-QWD" id="dEO-a9-xhi"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="328" style="plain" systemItem="fixedSpace" id="ijq-A8-D9m"/>
+                                    <barButtonItem systemItem="trash" id="atk-wU-0xb"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -167,13 +172,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="ASc-Pr-ZT6" firstAttribute="top" secondItem="pqp-tC-ia0" secondAttribute="top" constant="8" id="J4Q-yN-vun"/>
-                            <constraint firstItem="Ydb-b6-qe7" firstAttribute="top" secondItem="ASc-Pr-ZT6" secondAttribute="bottom" constant="8" id="K0a-9X-LyJ"/>
-                            <constraint firstItem="pqp-tC-ia0" firstAttribute="trailing" secondItem="ASc-Pr-ZT6" secondAttribute="trailing" constant="8" id="KUo-8o-6Bz"/>
-                            <constraint firstAttribute="trailing" secondItem="Ydb-b6-qe7" secondAttribute="trailing" id="Ou9-g5-KlF"/>
-                            <constraint firstItem="pqp-tC-ia0" firstAttribute="bottom" secondItem="Ydb-b6-qe7" secondAttribute="bottom" id="gWp-rP-ngl"/>
-                            <constraint firstItem="ASc-Pr-ZT6" firstAttribute="leading" secondItem="pqp-tC-ia0" secondAttribute="leading" constant="8" id="ila-Yy-0vd"/>
-                            <constraint firstItem="Ydb-b6-qe7" firstAttribute="leading" secondItem="4R6-Ob-Ba6" secondAttribute="leading" id="zKv-7b-xvL"/>
+                            <constraint firstItem="ASc-Pr-ZT6" firstAttribute="centerX" secondItem="4R6-Ob-Ba6" secondAttribute="centerX" id="1Ag-f4-aVX"/>
+                            <constraint firstItem="Ydb-b6-qe7" firstAttribute="top" secondItem="ASc-Pr-ZT6" secondAttribute="bottom" constant="8" id="GKQ-1q-KGx"/>
+                            <constraint firstItem="ASc-Pr-ZT6" firstAttribute="leading" secondItem="pqp-tC-ia0" secondAttribute="leading" constant="8" id="NKj-OR-95a"/>
+                            <constraint firstItem="ASc-Pr-ZT6" firstAttribute="centerX" secondItem="Ydb-b6-qe7" secondAttribute="centerX" id="Pu5-tJ-qUd"/>
+                            <constraint firstItem="Ydb-b6-qe7" firstAttribute="leading" secondItem="pqp-tC-ia0" secondAttribute="leading" id="YG8-0e-V6i"/>
+                            <constraint firstItem="ASc-Pr-ZT6" firstAttribute="top" secondItem="pqp-tC-ia0" secondAttribute="top" constant="8" id="frj-fY-KHf"/>
+                            <constraint firstItem="Ydb-b6-qe7" firstAttribute="bottom" secondItem="pqp-tC-ia0" secondAttribute="bottom" id="rpm-LM-zkw"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Lc9-GA-qu4" appends="YES" id="ldb-wh-nFx"/>
