@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ItemStore {
+class TeamStore {
     
-    var allItems = [Item]()
+    var allItems = [Team]()
     let itemArchiveURL: URL = {
         let documentsDirectories =
             FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -21,7 +21,7 @@ class ItemStore {
         do {
             let data = try Data(contentsOf: itemArchiveURL)
             let unarchiver = PropertyListDecoder()
-            let items = try unarchiver.decode([Item].self, from: data)
+            let items = try unarchiver.decode([Team].self, from: data)
             allItems = items
         } catch {
             print("Error reading in saved items: \(error)")
@@ -32,16 +32,16 @@ class ItemStore {
         notificationCenter.addObserver(self, selector: #selector(saveChanges), name: UIScene.didEnterBackgroundNotification, object: nil)
     }
     
-    @discardableResult func createItem() -> Item {
+    @discardableResult func createItem() -> Team {
         
-        let newItem = Item(random: true)
+        let newItem = Team(random: true)
         
         allItems.append(newItem)
         
         return newItem
     }
     
-    func removeItem(_ item: Item) {
+    func removeItem(_ item: Team) {
         if let index = allItems.firstIndex(of: item) {
             allItems.remove(at: index)
         }

@@ -40,7 +40,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var scheduleField: UITextView!
     
     
-    var item: Item! {
+    var item: Team! {
         didSet {
                 navigationItem.title = item.teamName
             }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Item: Equatable, Codable {
+class Team: Equatable, Codable {
     var teamName: String
     var record: String
     var division: String
@@ -47,7 +47,7 @@ class Item: Equatable, Codable {
         }
     }
     
-    static func ==(lhs: Item, rhs: Item) -> Bool {
+    static func ==(lhs: Team, rhs: Team) -> Bool {
         return lhs.teamName == rhs.teamName
         && lhs.record == rhs.record
         && lhs.division == rhs.division

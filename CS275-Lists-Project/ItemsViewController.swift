@@ -9,7 +9,7 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     
-    var itemStore: ItemStore!
+    var itemStore: TeamStore!
     
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         // Create a new item and add it to the store

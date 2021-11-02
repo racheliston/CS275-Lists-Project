@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         // Create an ItemStore
-        let itemStore = ItemStore()
+        let itemStore = TeamStore()
         
         // Access the ItemsViewController and set its item store
         let navController = window!.rootViewController as! UINavigationController
