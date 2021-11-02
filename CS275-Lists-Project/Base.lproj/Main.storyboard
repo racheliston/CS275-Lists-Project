@@ -164,7 +164,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="328" style="plain" systemItem="fixedSpace" id="ijq-A8-D9m"/>
-                                    <barButtonItem systemItem="trash" id="atk-wU-0xb"/>
+                                    <barButtonItem systemItem="trash" id="atk-wU-0xb">
+                                        <connections>
+                                            <action selector="deletePhoto:" destination="e1T-LQ-QWD" id="6h2-wb-ake"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

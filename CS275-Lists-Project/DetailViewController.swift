@@ -9,6 +9,27 @@ import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate {
     
+    @IBAction func deletePhoto(_ sender: UIBarButtonItem) {
+        // Create an alert controller to prompt user and ask if they are sure
+        // they want to delete the item
+        let alertController = UIAlertController(title: nil,
+                                                message: "Are you sure you want to delete \(item.teamName)",
+                                                preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        let deleteAction = UIAlertAction(title: "Yes", style: .destructive) {_ in
+            // Remove the item and return to previous view
+            self.navigationController!.popViewController(animated: true)
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteAction)
+
+        present(alertController, animated: true, completion: nil)
+
+    }
+    
     @IBAction func choosePhotoSource(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alertController.modalPresentationStyle = .popover
