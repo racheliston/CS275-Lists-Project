@@ -68,29 +68,24 @@ class ItemsViewController: UITableViewController {
         if editingStyle == .delete {
             let item = itemStore.allItems[indexPath.row]
             // Create an alert controller
-//            let alertController = UIAlertController(title: nil,
-//                                                    message: "Are you sure you want to delete \(item.teamName)",
-//                                                    preferredStyle: .alert)
-//
-//            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-//            alertController.addAction(cancelAction)
-//
-//            let deleteAction = UIAlertAction(title: "Yes", style: .destructive) {_ in
-//                // Remove the item from the store
-//                self.itemStore.removeItem(item)
-//
-//                // Also remove that row from the table view with an animation
-//                self.tableView.deleteRows(at: [indexPath], with: .automatic)
-//            }
-//            alertController.addAction(cancelAction)
-//            alertController.addAction(deleteAction)
-//
-//            present(alertController, animated: true, completion: nil)
-            // Remove the item from the store
-            itemStore.removeItem(item)
+            let alertController = UIAlertController(title: nil,
+                                                    message: "Are you sure you want to delete \(item.teamName)",
+                                                    preferredStyle: .alert)
 
-            // Also remove that row from the table view with an animation
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+            let deleteAction = UIAlertAction(title: "Yes", style: .destructive) {_ in
+                // Remove the item from the store
+                self.itemStore.removeItem(item)
+
+                // Also remove that row from the table view with an animation
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+            
+            alertController.addAction(cancelAction)
+            alertController.addAction(deleteAction)
+
+            present(alertController, animated: true, completion: nil)
         }
     }
     
