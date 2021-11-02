@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Item: Equatable {
+class Item: Equatable, Codable {
     var teamName: String
     var record: String
     var division: String
