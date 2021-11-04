@@ -15,6 +15,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet var scheduleField: UITextView!
     @IBOutlet var imageView: UIImageView!
     
+    var imageStore: ImageStore!
+    
+    var item: Team! {
+        didSet {
+                navigationItem.title = item.teamName
+            }
+    }
+    
     @IBAction func deletePhoto(_ sender: UIBarButtonItem) {
         // Create an alert controller to prompt user and ask if they are sure
         // they want to delete the item
@@ -84,15 +92,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         view.endEditing(true)
     }
     
+
     
     
-    var item: Team! {
-        didSet {
-                navigationItem.title = item.teamName
-            }
-    }
-    
-    var imageStore: ImageStore!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

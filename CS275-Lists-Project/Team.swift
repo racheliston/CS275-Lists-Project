@@ -25,7 +25,7 @@ class Team: Equatable, Codable {
     }
     
     convenience init(random: Bool = false) {
-        if random {
+        /*if random {
             let names = ["Philadelphia Eagles", "New England Patriots", "Baltimore Ravens", "Arizona Cardinals"]
             let records = ["2-4-0", "2-4-0", "5-1-0", "6-0-0"]
             let divisions = ["NFC East", "AFC East", "AFC North", "NFC West"]
@@ -46,7 +46,13 @@ class Team: Equatable, Codable {
                       schedule: randomSchedule)
         } else {
             self.init(teamName: "UVM", record: "3-0-1", division: "America East", established: "1791", schedule: ["UVM vs. Penn State : 63-0"])
-        }
+        }*/
+        // initialize a new, blank row entry for user
+        self.init(teamName: "(new entry)",
+                  record: "",
+                  division: "",
+                  established: "",
+                  schedule: [])
     }
     
     static func ==(lhs: Team, rhs: Team) -> Bool {
