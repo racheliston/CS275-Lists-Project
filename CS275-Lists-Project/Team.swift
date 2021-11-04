@@ -13,6 +13,7 @@ class Team: Equatable, Codable {
     var division: String
     var established: String //Used to be Int
     var schedule = [String]()
+    let teamKey: String
     
     init(teamName: String, record: String, division: String, established: String, schedule: [String]) {
         self.teamName = teamName
@@ -20,6 +21,7 @@ class Team: Equatable, Codable {
         self.division = division
         self.established = established
         self.schedule = schedule
+        self.teamKey = UUID().uuidString
     }
     
     convenience init(random: Bool = false) {
