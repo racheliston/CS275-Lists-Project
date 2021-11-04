@@ -122,6 +122,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         // "Save" changes to item
         item.record = recordLabel.text ?? ""
         item.established = foundedLabel.text ?? ""
+        item.schedule = scheduleField.text
         item.teamName = nameLabel.text ?? ""
 
         
