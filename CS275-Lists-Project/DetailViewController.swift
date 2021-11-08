@@ -126,12 +126,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         item.teamName = nameLabel.text ?? ""
 
         
-        /*if let valueText = scheduleField.text,
-            let value = numberFormatter.number(from: valueText) {
-            item.established = value.intValue
-        } else {
-            item.established = 0
-        }*/
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
