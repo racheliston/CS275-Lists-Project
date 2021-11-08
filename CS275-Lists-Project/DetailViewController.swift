@@ -14,8 +14,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet var foundedLabel: UITextField!
     @IBOutlet var scheduleField: UITextView!
     @IBOutlet var imageView: UIImageView!
+    var itemStore: TeamStore!
+    var teamStore: ItemsViewController!
     
     var imageStore: ImageStore!
+    
+    var indexPath: IndexPath = []
     
     var item: Team! {
         didSet {
@@ -31,10 +35,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
                                                 preferredStyle: .alert)
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-
+        let item = itemStore.allItems[indexPath.row]
         let deleteAction = UIAlertAction(title: "Yes", style: .destructive) {_ in
             // Remove the item and return to previous view
+            self.itemStore.removeItem(item)
+            
+            // Remove the item's image from the image store
+            self.imageStore.deleteImage(forKey: item.teamKey)
+            
             self.navigationController!.popViewController(animated: true)
+            
         }
         
         alertController.addAction(cancelAction)
