@@ -15,8 +15,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet var scheduleField: UITextView!
     @IBOutlet var imageView: UIImageView!
     var itemStore: TeamStore!
-    var teamStore: ItemsViewController!
-    
+    var row: Int!
     var imageStore: ImageStore!
     
     var indexPath: IndexPath = []
@@ -34,21 +33,17 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
                                                 message: "Are you sure you want to delete \(item.teamName)",
                                                 preferredStyle: .alert)
 
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let item = itemStore.allItems[indexPath.row]
         let deleteAction = UIAlertAction(title: "Yes", style: .destructive) {_ in
-            // Remove the item and return to previous view
-            self.itemStore.removeItem(item)
-            
-            // Remove the item's image from the image store
-            self.imageStore.deleteImage(forKey: item.teamKey)
-            
             self.navigationController!.popViewController(animated: true)
-            
+            let team = self.itemStore.allItems[self.row]
+            self.itemStore.removeItem(team)
+            self.imageStore.deleteImage(forKey: team.teamKey)
         }
         
-        alertController.addAction(cancelAction)
         alertController.addAction(deleteAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
 
         present(alertController, animated: true, completion: nil)
 

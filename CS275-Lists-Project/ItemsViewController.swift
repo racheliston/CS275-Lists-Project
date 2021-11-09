@@ -97,7 +97,9 @@ class ItemsViewController: UITableViewController {
                 let item = itemStore.allItems[row]
                 let detailViewController = segue.destination as! DetailViewController
                 detailViewController.item = item
+                detailViewController.itemStore = itemStore
                 detailViewController.imageStore = imageStore
+                detailViewController.row = row
             }
         default:
             preconditionFailure("Unexpected segue identifier.")
